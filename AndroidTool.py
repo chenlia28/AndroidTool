@@ -28,6 +28,12 @@ def  Download_Dingtone_log():
 def  Download_TalkU_log():
     os.system('adb pull /sdcard/Talkyou/log ./log')
 
+def  Download_DingtoneDebug_log():
+    os.system('adb pull /sdcard/DingtoneDebug/log ./log')
+
+def  Download_TalkUDebug_log():
+    os.system('adb pull /sdcard/TalkyouDebug/log ./log')
+
 # 创建下拉列表的group
 # li = ['* Capture Screenshot', '* Install APK', '* Log TalkU', '* Log TalkUDebug','* Log Dingtone','* Log DingtoneDebug']
 
@@ -70,7 +76,13 @@ InstallButton.pack(side=LEFT)
 DownloadDingtonelogButton = Button(frame2, text="Dingtone Log", command=Download_Dingtone_log)
 DownloadDingtonelogButton.pack(side=LEFT)
 
+DownloadDingtonelogButton = Button(frame2, text="DingtoneDebug Log", command=Download_DingtoneDebug_log)
+DownloadDingtonelogButton.pack(side=LEFT)
+
 DownloadTalkUlogButton = Button(frame2, text="TalkU Log", command=Download_TalkU_log)
+DownloadTalkUlogButton.pack(side=LEFT)
+
+DownloadTalkUlogButton = Button(frame2, text="TalkUDebug Log", command=Download_TalkUDebug_log)
 DownloadTalkUlogButton.pack(side=LEFT)
 
 frame1.pack(padx=100, pady=50)
